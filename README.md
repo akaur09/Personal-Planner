@@ -11,9 +11,9 @@ how did i create this?
 Link:
 
 # Languages Used:
-    - Index.html
-    - CSS
-    -Javascript
-    -JQuery
+ - Index.html
+ - CSS
+ -Javascript
+ -JQuery
 
 # Lisence 
