@@ -11,3 +11,34 @@
 // THEN the text for that event is saved in local storage
 // WHEN I refresh the page
 // THEN the saved events persist
+$(document).ready(function(){
+    $("#currentday").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+
+    $(".savePlan").on("click", function(){
+        var time= $(this).parent().attr("id");
+        var text = $(this).siblings(".description").val();
+        console.log(this);
+        localStorage.setItem(time,text);
+    })
+    $("#8.description").val(localStorage).getItem("#8");
+    $("#9.description").val(localStorage).getItem("#9");
+    $("#10.description").val(localStorage).getItem("#10");
+    $("#11.description").val(localStorage).getItem("#11");
+    $("#12.description").val(localStorage).getItem("#12");
+    $("#1.description").val(localStorage).getItem("#1");
+    $("#2.description").val(localStorage).getItem("#2");
+    $("#3.description").val(localStorage).getItem("#3");
+    $("#4.description").val(localStorage).getItem("#4");
+    $("#5.description").val(localStorage).getItem("#5");
+
+    function timeTrack(){
+        var currenthour = moment().hour();
+        
+        $(".time-block").each(function(){
+            var hourblock =parseInt($(this).attr("id").split("hour")[1]);
+            console.log(hourblock, currenthour)
+
+            if
+        })
+    }
+})

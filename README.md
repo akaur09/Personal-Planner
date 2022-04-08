@@ -3,7 +3,7 @@
 # Description:
 what was the purpose of this?
 
-why did i creste this?
+why did i create this?
 
 how did i create this?
     - add the screenshot/gif here
