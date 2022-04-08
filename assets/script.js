@@ -38,7 +38,20 @@ $(document).ready(function(){
             var hourblock =parseInt($(this).attr("id").split("hour")[1]);
             console.log(hourblock, currenthour)
 
-            if
+            if (hourblock < currenthour){
+                $(this).addClass("past");
+                $(this).addClass("present");
+                $(this).addClass("future");
+            } else if (hourblock === currenthour){
+                $(this).addClass("past");
+                $(this).addClass("present");
+                $(this).addClass("future");
+            } else {
+                $(this).addClass("past");
+                $(this).addClass("present");
+                $(this).addClass("future");
+            }
         })
     }
+    timeTrack();
 })
