@@ -12,7 +12,7 @@
 // WHEN I refresh the page
 // THEN the saved events persist
 $(document).ready(function(){
-    $("#currentday").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+    $("#currentday").text(moment().format("dddd, MMMM Do YYYY"));
 
     $(".savePlan").on("click", function(){
         var time= $(this).parent().attr("id");
@@ -40,16 +40,16 @@ $(document).ready(function(){
 
             if (hourblock < currenthour){
                 $(this).addClass("past");
-                $(this).addClass("present");
-                $(this).addClass("future");
-            } else if (hourblock === currenthour){
-                $(this).addClass("past");
-                $(this).addClass("present");
+                // $(this).addClass("present");
+                // $(this).addClass("future");
+            } else if (hourblock > currenthour){
+                // $(this).addClass("past");
+                // $(this).addClass("present");
                 $(this).addClass("future");
             } else {
-                $(this).addClass("past");
+                // $(this).addClass("past");
                 $(this).addClass("present");
-                $(this).addClass("future");
+                // $(this).addClass("future");
             }
         })
     }

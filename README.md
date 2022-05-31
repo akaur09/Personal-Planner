@@ -15,7 +15,7 @@ Javascript
 JQuery
 
 # Credits:
-This planner was created by me.
+Amnider Kaur (https://github.com/akaur09)
 
 # Lisence:
 Copyright (c) [2022] [Amnider Kaur]
