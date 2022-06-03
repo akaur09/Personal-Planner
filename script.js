@@ -7,24 +7,31 @@ $("#currentDay").append(date);
 // define hours 
 var Hours = ["8","9","10","11","12","13","14","15","16","17"]
 updateTime();
+// set time to update color blocks
+setInterval(updateTime, 60000);
 // create a function for updateing time using if else statements
 function updateTime (){
-    // define current time
-    var currentTime = moment().format('H');
-    for (var i = 0; i < Hours.length; i++){
+    $(".time-block").each(function(){
+        // define current time
+        var currentTime = parseInt(moment().format('H'));
+        var blockTime = parseInt($(this).attr("id").replace("hour-", ""));
+    
         // add if/else statements to change color as time goes by
-        if(parseInt(Hours[i] > currentTime)) {
-            $("#" + Hours[i].attribute("style", "background-color: #58ce7b"));
-        } else if (parseInt(Hours[i]) < currentTime) {
-            $("#" + Hours[i].attribute("style", "background-color: white"));
-        } else if (parseInt(Hours[i]) == currentTime) {
-            $("#" + Hours[i].attribute("style", "background-color: #fc665e"));
+        // fix to change color
+        if(parseInt(blockTime > currentTime)) {
+            $(this).addClass("future")
+        } else if (parseInt(blockTime) < currentTime) {
+            $(this).addClass("past");
+        } else if (parseInt(blockTime) == currentTime) {
+            $(this).addClass("present");
         }
-    }
+      
+    })
+
 }
 // create an on click event listner to save to local storage
 $(".saveBtn").on("click", function() {
-    var Hours = $(this).parent().attribute("id");
+    var Hours = $(this).parent().attr("id");
     var textContent = $("input").val().trim();
 
     localStorage.setItem(Hours,textContent);
