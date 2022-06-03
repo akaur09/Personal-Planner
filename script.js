@@ -15,14 +15,15 @@ function updateTime (){
         // define current time
         var currentTime = parseInt(moment().format('H'));
         var blockTime = parseInt($(this).attr("id").replace("hour-", ""));
-    
+        // remove added classes to past, present and future
+        $(this).removeClass("past present future");
         // add if/else statements to change color as time goes by
         // fix to change color
-        if(parseInt(blockTime > currentTime)) {
+        if((blockTime > currentTime)) {
             $(this).addClass("future")
-        } else if (parseInt(blockTime) < currentTime) {
+        } else if ((blockTime) < currentTime) {
             $(this).addClass("past");
-        } else if (parseInt(blockTime) == currentTime) {
+        } else if ((blockTime) == currentTime) {
             $(this).addClass("present");
         }
       
