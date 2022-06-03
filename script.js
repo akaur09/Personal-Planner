@@ -31,3 +31,13 @@ $(".saveBtn").on("click", function() {
     console.log ("added Hours and textContent");
 });
 // add function to get each hour (child) and set it into the parent
+$("#8").children("input").val(localStorage.getItem("8am"));
+$("#9").children("input").val(localStorage.getItem("9am"));
+$("#10").children("input").val(localStorage.getItem("10am"));
+$("#11").children("input").val(localStorage.getItem("11am"));
+$("#12").children("input").val(localStorage.getItem("12pm"));
+$("#13").children("input").val(localStorage.getItem("1pm"));
+$("#14").children("input").val(localStorage.getItem("2pm"));
+$("#15").children("input").val(localStorage.getItem("3pm"));
+$("#16").children("input").val(localStorage.getItem("4pm"));
+$("#17").children("input").val(localStorage.getItem("5pm"));
