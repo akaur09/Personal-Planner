@@ -23,4 +23,11 @@ function updateTime (){
     }
 }
 // create an on click event listner to save to local storage
+$(".saveBtn").on("click", function() {
+    var Hours = $(this).parent().attribute("id");
+    var textContent = $("input").val().trim();
+
+    localStorage.setItem(Hours,textContent);
+    console.log ("added Hours and textContent");
+});
 // add function to get each hour (child) and set it into the parent
