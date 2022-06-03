@@ -16,7 +16,7 @@ function updateTime (){
         if(parseInt(Hours[i] > currentTime)) {
             $("#" + Hours[i].attribute("style", "background-color: #58ce7b"));
         } else if (parseInt(Hours[i]) < currentTime) {
-            $("#" + Hours[i].attribute("style", "background-color: lightgray"));
+            $("#" + Hours[i].attribute("style", "background-color: white"));
         } else if (parseInt(Hours[i]) == currentTime) {
             $("#" + Hours[i].attribute("style", "background-color: #fc665e"));
         }
